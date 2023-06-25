@@ -9,8 +9,10 @@ all: $(TARGET)
 $(TARGET): $(SRC)
 	$(CC) -g -o $@ $^
 
-run: 
+run: FORCE
 	./$(TARGET)
 
-clean:
+clean: FORCE
 	rm -rf $(TARGET) *.json
+
+FORCE:
